@@ -14,7 +14,7 @@ This code requires a CFML engine. It has been successfully tested on [Adobe Cold
 * Open Source [Lucee Server](https://lucee.org/ "Lucee Server")
 * Commercially available [Adobe ColdFusion 2018](https://www.adobe.com/products/coldfusion-family.html "Adobe ColdFusion 2018")
 
-###Application Installation###
+### Application Installation
 Create a new project under your CFML engine. Place the two files _controller.cfc_ and _model.cfc_ under your new web application root. The project is engineered on an MVC model, however since this is a simple API there is no any _View_ at the moment. Follow the Database Server installation instructions to set-up a new database and create a new datasource to point there.
 
 * _controller.cfc_
@@ -31,21 +31,21 @@ Next, is to go through the comments and change the Telephone Number validation i
 
 The project has been designed and developed on Microsoft SQL Server but we cannot see any reason why this should not work on Oracle, MySQL or any other SQL server. Notice that in order to be able to handle massive data we have applied a spooling approach. All data are uploaded, stored in a spool table and then, a stored procedure will handle them in batches. We have stressed-tested this project for millions of records with no problems at all. Batch-processing allows no table locks, no uncommitted transactions, no waits or deadlocks. 
 
-###Database Installation###
+### Database Installation
 You will need to create a new database on Microsoft SQL and then execute all .sql scripts which are provided within this repository. 
 
-#####Tables#####
+##### Tables
 
 * tbl_user.sql
 * tbl\_user\_log.sql
 * tbl\_user\_log\_spool.sql
 
-#####Stored Procedures#####
+##### Stored Procedures
 
 * sp\_cofight\_process\_spool.sql
 * sp\_cofight\_clear\_history.sql
 
-#####Scheduled Jobs#####
+##### Scheduled Jobs
 You should create two different scheduled jobs, to execute on a timely manner both _sp\_cofight\_process\_spool_ and _sp\_cofight\_clear\_history_ . Frequency depends on your resource availability.  
 
 
