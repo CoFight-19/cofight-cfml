@@ -14,7 +14,7 @@ Timestamp  | Device
 
 This catalog holds intersections for 21 days although this is a setting that can be changed. Client will never post the catalog at the server side unless the user chooses to do so. Typically this will be ideal if the mobile owner is tested positive for Covid-19. By uploading his/her catalog he can contribute to stop the spread of the SARS-CoV-2 virus.
 
-In a nutshell, this project is attempting to proactively form a network of intersections. When a citizen is tested positive for Covid-19, the goal is to _cut_ the branch of the infected node to stop spreading the virus.
+In a nutshell, this project is attempting to proactively form a network of intersections. When a citizen is tested positive for Covid-19, the goal is to provide the tools to local authorities and help in _cutting_ the branch of the infected node to stop spreading the virus.
 
 
 ## Application Server
